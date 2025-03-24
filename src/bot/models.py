@@ -1,6 +1,6 @@
 """Bot configuration models."""
 
-from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, asdict
 from typing import Dict, List, Optional
 
 DEFAULT_OPENROUTER_CONFIG = {
@@ -10,6 +10,7 @@ DEFAULT_OPENROUTER_CONFIG = {
 }
 
 DEFAULT_MCP_SERVER_CONFIG = ["todo"]
+
 
 @dataclass
 class BotConfig:
@@ -25,6 +26,8 @@ class BotConfig:
     max_tokens: Optional[int] = None
     custom_api_path: Optional[str] = None
     reasoning_effort: Optional[str] = None
+    lark_llm_app_id: Optional[str] = None
+    lark_llm_app_secret: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: Dict) -> 'BotConfig':
