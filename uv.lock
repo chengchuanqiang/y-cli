@@ -434,7 +434,7 @@ wheels = [
 
 [[package]]
 name = "y-cli"
-version = "0.3.10"
+version = "0.3.11_beta"
 source = { virtual = "." }
 dependencies = [
     { name = "aiofiles" },
